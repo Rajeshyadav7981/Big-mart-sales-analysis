@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chart.js Example</title>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<style>
+		body {
+			background-color:#25b7c4;
+			font-family: Arial, sans-serif;
+		}
+		.chart-container {
+			text-align: center;
+			margin: auto;
+			max-width: 800px;
+		}
+		.chart {
+			width: 400px;
+			height: 400px;
+			margin: 20px;
+			display: inline-block;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			background-color: #fff;
+			padding: 20px;
+			box-sizing: border-box;
+		}
+		.chart-title {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+			color: #333;
+		}
+		.chart-subtitle {
+			font-size: 16px;
+			font-weight: normal;
+			margin-bottom: 10px;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="chart-container">
+		<div class="chart">
+			<div class="chart-title">Pie Chart</div>
+			<canvas id="pie-chart"></canvas>
+			<div class="chart-subtitle">Colors</div>
+		</div>
+		<div class="chart">
+			<div class="chart-title">Line Chart</div>
+			<canvas id="line-chart"></canvas>
+			<div class="chart-subtitle">Sales</div>
+		</div>
+		<div class="chart">
+			<div class="chart-title">Bar Chart</div>
+			<canvas id="bar-chart"></canvas>
+			<div class="chart-subtitle">Sales</div>
+		</div>
+	</div>
+
+	<script>
+		var pieChart = new Chart(document.getElementById("pie-chart"), {
+			type: 'pie',
+			data: {
+				labels: ['Random Forest','Linear Regression','Decesion Tree'],
+				datasets: [{
+					label: 'Accurccy',
+					data: [93.8,72.5,80.9],
+					backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+				}]
+			},
+			options: {
+				responsive: false,
+				maintainAspectRatio: false,
+				legend: {
+					position: 'bottom'
+				}
+			}
+		});
+    var pieChart = new Chart(document.getElementById("line-chart"), {
+			type: 'line',
+			data: {
+				labels: ['Random Forest','Linear Regression','Decesion Tree'],
+				datasets: [{
+					label: 'Accuracy',
+					data: [93.8,72.5,80.9],
+					backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+				}]
+			},
+			options: {
+				responsive: false,
+				maintainAspectRatio: false,
+				legend: {
+					position: 'bottom'
+				}
+			}
+		});
+    var pieChart = new Chart(document.getElementById("bar-chart"), {
+			type: 'bar',
+			data: {
+				labels: ['Random Forest','Linear Regression','Decesion Tree'],
+				datasets: [{
+					label: 'Accuracy',
+					data: [93.8,72.5,80.9],
+					backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+				}]
+			},
+			options: {
+				responsive: false,
+				maintainAspectRatio: false,
+				legend: {
+					position: 'bottom'
+				}
+			}
+		});
+    </script>
+    </body>
+    </html>
+
+    
